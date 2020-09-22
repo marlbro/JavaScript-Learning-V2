@@ -66,10 +66,19 @@ document.querySelector('.btn-hold').addEventListener('click', function (){
     // update UI
     document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
         
-        document.querySelector('.set-score').classList.value
+       var input = document.querySelector('.score-set').value;
+       var winningScore; 
+     
+        // undefined, 0, null, or "" are COERCED to false
+        // anything else is COERCED to true
+        if(input) {
+            winningScore = input;
+        } else {
+            winningScore = 100; 
+        }
                                                     
     // check if player won game
-    if (scores[activePlayer] >= 20) {
+    if (scores[activePlayer] >= winningScore) {
         document.querySelector('#name-' + activePlayer).textContent = 'Winner!';
         document.querySelector('.dice').style.display = 'none';
         document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
