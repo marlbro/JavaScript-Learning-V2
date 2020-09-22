@@ -11,10 +11,12 @@
     font-family: 'Lato';
     text-align: center;
     padding: 20px;
-    width: 140px;
+    width: 120px;
     text-transform: lowercase;
 
 }
+
+.score-set:focus { outline: none;}
 
 * {
     margin: 0;
