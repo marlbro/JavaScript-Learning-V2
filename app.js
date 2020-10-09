@@ -13,12 +13,7 @@ var scores, roundScore, activePlayer, gamePlaying;
 
 init();
 
-
-
 // dice = Math.floor(Math.random() * 6) + 1;
-
-
-
 
 document.querySelector('.btn-roll').addEventListener('click', function () {
     if(gamePlaying) {  
@@ -48,8 +43,6 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
       
     
 });
-
-
 document.querySelector('.btn-hold').addEventListener('click', function (){
     if (gamePlaying) {
         
