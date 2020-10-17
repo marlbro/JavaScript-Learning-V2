@@ -1,2 +1,2 @@
 # JavaScript-Learning-V2
- Dice Game
+ My take on a Dice Game using JavaScript. 
