@@ -62,10 +62,24 @@ document.querySelector('.btn-hold').addEventListener('click', function (){
     scores[activePlayer] += roundScore;
                                                      
     // update UI
+        
+      
     document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
+        
+        
+
+    var myValue = document.querySelector('.score-set').value  
+    var winScore;
+        
+        if(myValue){
+            winScore = myValue;
+        } else {
+            winScore = 100;
+        }
+    
                                                     
     // check if player won game
-    if (scores[activePlayer] >= 20) {
+    if (scores[activePlayer] >= winScore) {
         document.querySelector('#name-' + activePlayer).textContent = 'Winner!';
         document.querySelector('.dice').style.display = 'none';
         document.querySelector('.diceTWO').style.display = 'none';
